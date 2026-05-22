@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>꼬똥을 위한 펫보험 비교</title>
+    <title>꼬똥을 위한 펫보험 비교</title>
+  <meta property="og:title" content="꼬똥을 위한 펫보험 비교">
+  <meta property="og:description" content="우리 꼬똥이를 위한 4개 보험사 보장 및 가격 총정리">
+  <meta property="og:image" content="https://wse02123.github.io/coton-pet-insurance/og-image.jpg">
+  <meta property="og:type" content="website">
   <style>
     @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v3.2.1/dist/web/static/pretendard.css");
     
@@ -369,6 +373,27 @@
     }
     @media screen and (max-width: 500px) {
       .comparison-grid { grid-template-columns: 1fr; }
+    }
+
+    /* 아코디언 펼침/닫힘 애니메이션 */
+    details { transition: all 0.3s ease; }
+    summary {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      cursor: pointer;
+      list-style: none; /* 기본 화살표 숨김 */
+    }
+    summary::-webkit-details-marker { display: none; } /* Safari용 기본 화살표 숨김 */
+    
+    .arrow {
+      transition: transform 0.3s ease;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+    details[open] summary .arrow {
+      transform: rotate(180deg);
+      color: #0f172a;
     }
 </style>
 </head>
